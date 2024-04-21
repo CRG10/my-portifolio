@@ -1,7 +1,7 @@
 import { Box, Container, Grid, Typography, styled } from "@mui/material"
 import Avatar from "../../../../assets/images/avatar.jpg"
 import DownloadIcon from '@mui/icons-material/Download';
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import StyledButton from "../../../../components/StyledButton/StyledButton";
 import theme from "../../../../theme";
 import { AnimatedBackground } from "../../../../components/AnimateBackground/AnimateBackground";
@@ -35,6 +35,8 @@ const Hero = () => {
         border:`1px solid ${theme.palette.primary.contrastText}`
     }))
 
+    const whatsappMessage = encodeURIComponent("Olá! Vi seu portfólio e gostaria de tê-lo na minha equipe.");
+
     return (
       <>
        <StyledHero>
@@ -66,12 +68,14 @@ const Hero = () => {
                                 </a>
                             </Grid>
                             <Grid item xs={12} md={4}  display="flex" justifyContent="center">
-                                <StyledButton onClick={() => console.log ("email")}> 
-                                    <MailOutlineIcon/>
-                                    <Typography> 
-                                        Contact me
-                                    </Typography>
-                                </StyledButton>
+                                <a href={`https://wa.me/5551989571988?text=${whatsappMessage}`} target="_blank" rel="noopener noreferrer">
+                                    <StyledButton onClick={() => console.log ("email")}> 
+                                        <WhatsAppIcon/>
+                                        <Typography> 
+                                            Contact me
+                                        </Typography>
+                                    </StyledButton>
+                                </a>
                             </Grid>
                         </Grid>
                     </Grid>
