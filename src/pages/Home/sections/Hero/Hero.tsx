@@ -26,7 +26,8 @@ const Hero = () => {
     const StyledImg = styled("img")(()=> ({
         width: "350px", // Largura fixa em pixels
         height: "350px" ,
-        borderRadius: "50%",  
+        borderRadius: "50%", 
+        display: "flex", 
         border:`1px solid ${theme.palette.primary.contrastText}`
     }))
 
