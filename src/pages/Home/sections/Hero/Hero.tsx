@@ -5,7 +5,11 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import StyledButton from "../../../../components/StyledButton/StyledButton";
 import theme from "../../../../theme";
 import { AnimatedBackground } from "../../../../components/AnimateBackground/AnimateBackground";
-
+import Image from "../../../../assets/images/Christian.pdf" 
+import FooterComponent from "../Footer/FooterComponent";
+import About from "../About/About";
+import Skils from "../Skils/skil";
+import Projects from "../Projects/Projects";
 const Hero = () => {
 
     const StyledHero = styled("div")(({ theme }) => ({
@@ -52,12 +56,14 @@ const Hero = () => {
                         <Typography color="primary.contrastText" variant="h2" textAlign="center" >I'm a Developer Web</Typography>
                         <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
                             <Grid item xs={12} md={4} display="flex" justifyContent="center">
-                                <StyledButton onClick={() => console.log ("Download")}>
-                                    <DownloadIcon/> 
-                                    <Typography> 
-                                        Download CV 
-                                    </Typography>
-                                </StyledButton>
+                                <a href={Image} download>
+                                    <StyledButton onClick={() => console.log ("Download")}>
+                                        <DownloadIcon/> 
+                                        <Typography> 
+                                            Download CV 
+                                        </Typography>
+                                    </StyledButton>
+                                </a>
                             </Grid>
                             <Grid item xs={12} md={4}  display="flex" justifyContent="center">
                                 <StyledButton onClick={() => console.log ("email")}> 
@@ -72,6 +78,10 @@ const Hero = () => {
                 </Grid>
             </Container>
        </StyledHero>
+       <About/>
+       <Skils/>
+       <Projects/>
+       <FooterComponent /> 
       </>
     )
   }
